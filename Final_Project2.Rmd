@@ -1,0 +1,116 @@
+---
+title: "Final Project2"
+author: "Lejun Shen"
+date: "2025-02-14"
+output: html_document
+---
+```{r, here-i-am, include = FALSE}
+here::i_am(
+  "Final_Project2.Rmd"
+)
+```
+
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+# Introduction
+
+This dataset provides information about the passengers aboard the RMS Titanic, including details such as name, gender, and age. It also includes socioeconomic status indicators, represented by passenger class and fare price. Family relationships are captured through variables like the number of siblings/spouses and parents/children aboard. The key variable is survival status, a binary indicator showing whether a passenger survived or not.
+My goal is to build a classification model to predict survival and identify which variables have the most significant influence on the outcome.
+
+
+```{r load-data,echo = FALSE}
+library(tidyverse)
+titanic <- read.csv("titanic-passengers.csv", sep=";", stringsAsFactors=FALSE)
+```
+
+# Data Summary
+
+## Age and Fare Summary
+
+```{r age-summary,echo = FALSE}
+table1 <- readRDS(
+  here::here("table_output/table1.rds")
+)
+table1
+```
+For those who did not survive, the average age was 31 years with a standard deviation (SD) of 14. This suggests that survivors were on average younger. The average ticket fare for non-survivors was 22, with a wide spread (SD = 31). This implies that survivors tended to have paid higher fares, possibly indicating higher socioeconomic status or class (1st class passengers had a better chance of survival).
+
+
+## Survival by Gender
+
+```{r survival-gender,echo = FALSE}
+table2 <- readRDS(
+  here::here("table_output/table2.rds")
+)
+table2
+```
+There were 314 females (35%) and 577 males (65%) among all passengers.Out of the 342 survivors, 233 were female (68%). Only 109 males survived (32%).
+
+This suggests females had a significantly higher survival rate.
+
+## Survival by Passenger Class
+
+```{r survival-pclass,echo = FALSE}
+table3 <- readRDS(
+  here::here("table_output/table3.rds")
+)
+table3
+```
+Only 15% of those who died were from 1st class. A much higher proportion (40%) of survivors were from 1st class.
+
+18% of the deceased and 25% of the survivors were in 2nd class. Moderate survival advantage compared to 3rd class.
+
+68% of those who died were in 3rd class.Only 35% of survivors were from this group.
+
+
+## Survival rate for sex and class
+```{r summary-table,echo = FALSE}
+
+table4 <- readRDS(
+  here::here("table_output/table4.rds")
+)
+table4
+```
+The table above presents the survival rates of Titanic passengers categorized by gender (`Sex`) and passenger class (`Pclass`). It highlights a significant disparity in survival rates based on these factors. Female passengers had much higher survival rates across all classes, with first-class females having the highest survival rate (approximately 97%). In contrast, male passengers had lower survival rates overall, particularly in third class, where only around 13.5% survived. These findings suggest that gender and social class played a crucial role in survival likelihood during the disaster.
+
+
+
+# Visualization
+## class and survival
+```{r survival-plot,echo = FALSE}
+figure1 <- readRDS(
+  here::here("figure_output/figure1.rds")
+)
+figure1
+```
+The stacked bar chart above visualizes the survival rate by passenger class. The proportion of survivors (in blue) is significantly higher for first-class passengers compared to those in second and third class. This supports the trend observed in the numerical summary, indicating that passengers in higher classes had better survival chances.
+
+## age and survival
+```{r survival-age-plot,echo = FALSE}
+figure2 <- readRDS(
+  here::here("figure_output/figure2.rds")
+)
+figure2
+```
+
+The histogram above shows the distribution of survival across different age groups. We observe that younger passengers, particularly children, had a higher survival rate compared to older passengers.
+
+
+## gender and survival
+```{r survival-sex-plot,echo = FALSE}
+figure3 <- readRDS(
+  here::here("figure_output/figure3.rds")
+)
+figure3
+```
+
+The bar chart above illustrates the survival proportion by gender. Female passengers had a significantly higher survival rate compared to male passengers, reinforcing the "women and children first" evacuation policy.
+
+
+
+
+
+

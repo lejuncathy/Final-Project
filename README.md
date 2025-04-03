@@ -1,0 +1,38 @@
+README
+================
+
+# Final Project Report
+
+## 📄 Overview
+
+This project explores Titanic passenger data to understand survival
+patterns based on demographic and socioeconomic variables.
+
+## 🛠️ How to Generate the Final Report
+
+Make sure you’re in the folder where your folder is saved.
+
+### one way
+
+Run the R scripts that create your .rds tables and figures.
+
+Then, run Render_report.R to render Final_Project2.html.
+
+### second way
+
+Run the make command in the terminal
+
+## 📁 File Descriptions
+
+| File/Folder | Description |
+|----|----|
+| `Render_report.R` | Run for make final report |
+| `Final_Project2.Rmd` | Main R Markdown file containing analysis and report |
+| `Final_Project2.html` | Rendered final report |
+| `titanic-passengers.csv` | Source data |
+| `table_code/` | R scripts for generating the required table |
+| `table_output/` | Output of required table |
+| `figure_code/` | R scripts for generating the required figure |
+| `figure_output/` | Output of required figure |
+| `README.md` | This documentation file |
+| `Makefile` | automation instructions for building report |
