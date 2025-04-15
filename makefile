@@ -1,3 +1,4 @@
+
 ## Render the report using Render_report.R after all RDS files are created
 Final_Project2.html: Render_report.R Final_Project2.Rmd \
                      table_output/table1.rds \
@@ -34,3 +35,7 @@ clean:
 	rm -f table_output/*.rds
 	rm -f figure_output/*.rds
 	rm -f report.html
+
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"

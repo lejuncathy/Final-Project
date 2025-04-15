@@ -12,6 +12,20 @@ patterns based on demographic and socioeconomic variables.
 
 Make sure you’re in the folder where your folder is saved.
 
+## Setting Up the Project
+
+To install required R packages using `renv`:
+
+``` bash
+make install
+```
+
+or directly from R:
+
+``` bash
+renv::restore()
+```
+
 ### one way
 
 Run the R scripts that create your .rds tables and figures.
