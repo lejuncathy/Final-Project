@@ -39,7 +39,6 @@ Available on DockerHub: https://hub.docker.com/layers/lejun2002/final/latest/ima
 ##  How to Build the Docker Image for Windows
 
 ```bash
-docker build -t lejun2002/final .
 make report
 ```
 The final report will showed in the final_report folder

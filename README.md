@@ -46,7 +46,6 @@ Available on DockerHub:
 ## How to Build the Docker Image for Windows
 
 ``` bash
-docker build -t lejun2002/final .
 make report
 ```
 
