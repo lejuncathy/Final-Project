@@ -43,5 +43,7 @@ COPY renv/settings.json renv/settings.json
 # Restore R package environment without prompts
 RUN Rscript -e "renv::restore(prompt = FALSE)"
 
-CMD make && mv Final_Project2.html final_report
+CMD Rscript Render_report.R
+
+
 

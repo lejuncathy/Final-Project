@@ -36,6 +36,22 @@ Then, run Render_report.R to render Final_Project2.html.
 
 Run the make command in the terminal
 
+# Final Project Report (Dockerized)
+
+## Docker Image
+
+Available on DockerHub:
+<https://hub.docker.com/layers/lejun2002/final/latest/images/sha256:a34f023defb7fd36b0c1271ddfedbb1237b82b4160a8b16e928d5d9c3d7c963d?uuid=DBC4C398-F4F5-4DA0-9822-0C17C45BD36F>
+
+## How to Build the Docker Image for Windows
+
+``` bash
+docker build -t lejun2002/final .
+make report
+```
+
+The final report will showed in the final_report folder
+
 ## 📁 File Descriptions
 
 | File/Folder | Description |
