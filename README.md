@@ -45,6 +45,12 @@ Available on DockerHub:
 
 ## How to Build the Docker Image for Windows
 
+If you’d like to build the image yourself locally:
+
+``` bash
+docker build -t lejun2002/final .
+```
+
 ``` bash
 make report
 ```

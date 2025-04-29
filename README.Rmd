@@ -37,7 +37,10 @@ Run the make command in the terminal
 Available on DockerHub: https://hub.docker.com/layers/lejun2002/final/latest/images/sha256:a34f023defb7fd36b0c1271ddfedbb1237b82b4160a8b16e928d5d9c3d7c963d?uuid=DBC4C398-F4F5-4DA0-9822-0C17C45BD36F
 
 ##  How to Build the Docker Image for Windows
-
+If you'd like to build the image yourself locally:
+```bash
+docker build -t lejun2002/final .
+```
 ```bash
 make report
 ```
